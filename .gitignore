@@ -1,0 +1,4 @@
+build/
+yocto/meta-openembedded/
+yocto/meta-raspberrypi/
+yocto/poky/

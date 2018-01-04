@@ -1,0 +1,13 @@
+diff --git a/drivers/mmc/bcm2835_sdhci.c b/drivers/mmc/bcm2835_sdhci.c
+index 8f2137e..bab6084 100644
+--- a/drivers/mmc/bcm2835_sdhci.c
++++ b/drivers/mmc/bcm2835_sdhci.c
+@@ -166,7 +166,7 @@ int bcm2835_sdhci_init(u32 regbase, u32 emmc_freq)
+ 	host->name = "bcm2835_sdhci";
+ 	host->ioaddr = (void *)regbase;
+ 	host->quirks = SDHCI_QUIRK_BROKEN_VOLTAGE | SDHCI_QUIRK_BROKEN_R1B |
+-		SDHCI_QUIRK_WAIT_SEND_CMD;
++		SDHCI_QUIRK_WAIT_SEND_CMD | SDHCI_QUIRK_NO_HISPD_BIT;
+ 	host->voltages = MMC_VDD_32_33 | MMC_VDD_33_34 | MMC_VDD_165_195;
+ 	host->ops = &bcm2835_ops;
+	
